@@ -22,3 +22,11 @@
   - Line: `94.26% (279/296)`
   - Instruction: `90.49% (1018/1125)`
 - **Notes:** Narrowed exclusions to only Postgres integration tests; MySQL tests executed and were skipped by environment conditions.
+
+## Iteration 4 — 2026-03-12
+
+- **Command:** `mvn test jacoco:report`
+- **Outcome:** Build failure (strict full-suite run)
+- **Tests:** 58 run, 0 failures, 1 error, 2 skipped
+- **Blocking error:** `PostgresIntegrationTests.available` -> `InvalidPathException: Illegal char <:> at index 13: JAVA_HOME = C:\Program Files\Java\jdk-21.0.10`
+- **Notes:** This iteration intentionally verifies strict full-suite behavior and preserves failure evidence in git history.
