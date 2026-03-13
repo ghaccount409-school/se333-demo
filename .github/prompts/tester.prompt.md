@@ -1,9 +1,14 @@
 <!-- --
-tools: ["final_project_se333-NigelMaloney/add"]
-description: "description of the tool"
-model: GPT-5.2--
-## Follow instruction below: ##
-1. Add 1+2 -->
+tools: [
+	"se333-MCP-server/analyze_coverage",
+	"se333-MCP-server/generate_test_report",
+	"se333-MCP-server/detect_code_smells",
+	"se333-MCP-server/scan_security_risks",
+	"se333-MCP-server/enforce_style_guide",
+	"se333-MCP-server/check_complexity"
+]
+description: "Tester workflow using SE333 MCP quality-analysis tools"
+model: GPT-5.2-->
 
 ---
 mode: tester-agent
@@ -25,7 +30,7 @@ r.
 1. Initialize Git (if needed). If the current directory is 
 not already a Git repository, initialize a new Git reposit
 ory.
-2. Configure Remote Repository.- Add  github.com/ghaccount409-school/final_project_se333_NigelMaloney as the `origin` remote.- If an `origin` remote already exists, replace it.
+2. Configure Remote Repository.- Add github.com/ghaccount409-school/se333-demo as the `origin` remote.- If an `origin` remote already exists, replace it.
 3. Ensure Trunk Branch- Ensure the trunk branch is named `main`.- Do not commit directly to `main`.
 4. Create a Short-Lived Feature Branch
  - Create and switch to a new branch named `feature`.
