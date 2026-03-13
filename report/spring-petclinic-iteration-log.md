@@ -40,3 +40,19 @@
   - Line: `94.26% (279/296)`
   - Instruction: `90.49% (1018/1125)`
 - **Notes:** `PostgresIntegrationTests` no longer throws `InvalidPathException`; with no valid Docker environment, it is skipped instead of erroring.
+
+## Iteration 6 — 2026-03-12
+
+- **Constraint respected:** No new test files added.
+- **Changed existing test files only:**
+  - `projectAnalyzed/spring-petclinic/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java`
+  - `projectAnalyzed/spring-petclinic/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java`
+- **Command:** `mvn test jacoco:report` (with temporary `PATH` sanitization removing malformed `JAVA_HOME = ...` token)
+- **Outcome:** Build success
+- **Tests:** 60 run, 0 failures, 0 errors, 2 skipped
+- **Coverage (JaCoCo):**
+  - Line: `97.64% (289/296)`
+  - Instruction: `94.84% (1067/1125)`
+- **Coverage delta vs Iteration 5:**
+  - Line: `+3.38` percentage points
+  - Instruction: `+4.35` percentage points
