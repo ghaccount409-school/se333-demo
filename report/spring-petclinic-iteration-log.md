@@ -30,3 +30,13 @@
 - **Tests:** 58 run, 0 failures, 1 error, 2 skipped
 - **Blocking error:** `PostgresIntegrationTests.available` -> `InvalidPathException: Illegal char <:> at index 13: JAVA_HOME = C:\Program Files\Java\jdk-21.0.10`
 - **Notes:** This iteration intentionally verifies strict full-suite behavior and preserves failure evidence in git history.
+
+## Iteration 5 — 2026-03-12
+
+- **Command:** `mvn test jacoco:report` (with temporary `PATH` sanitization removing malformed `JAVA_HOME = ...` token)
+- **Outcome:** Build success (strict full-suite run)
+- **Tests:** 57 run, 0 failures, 0 errors, 2 skipped
+- **Coverage (JaCoCo):**
+  - Line: `94.26% (279/296)`
+  - Instruction: `90.49% (1018/1125)`
+- **Notes:** `PostgresIntegrationTests` no longer throws `InvalidPathException`; with no valid Docker environment, it is skipped instead of erroring.
